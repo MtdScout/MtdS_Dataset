@@ -1,9 +1,0 @@
-const-string v[0-9]+, "Cannot initialize DES encryption with current key\. Assure the key is a BASE64 - 64 bits long"
-[EXCEPTION]          Ljava/lang/Exception; -> 0x[0-9a-fA-F]{4}
-const-string v[0-9]+, "DES encryption has been selected, but no key was found\. Please configure it by passing the key as property at database create\/open\. The property key is: ..*"
-invoke-static.* \{(v[0-9]+, )*(v[0-9]+)?\}, Ljava/util/Base64;\.getDecoder:\(\)Ljava/util/Base64\$Decoder;
-invoke-(virtual|super|interface).* \{(v[0-9]+, )*(v[0-9]+)?\}, Ljava/util/Base64\$Decoder;\.decode:\(Ljava/lang/String;\)\[B
-invoke-direct.* \{(v[0-9]+, )*(v[0-9]+)?\}, Ljavax/crypto/spec/DESKeySpec;\.<init>:\(\[B\)V
-invoke-static.* \{(v[0-9]+, )*(v[0-9]+)?\}, Ljavax/crypto/SecretKeyFactory;\.getInstance:\(Ljava/lang/String;\)Ljavax/crypto/SecretKeyFactory;
-invoke-(virtual|super|interface).* \{(v[0-9]+, )*(v[0-9]+)?\}, Ljavax/crypto/SecretKeyFactory;\.generateSecret:\(Ljava/security/spec/KeySpec;\)Ljavax/crypto/SecretKey;
-invoke-static.* \{(v[0-9]+, )*(v[0-9]+)?\}, Ljavax/crypto/Cipher;\.getInstance:\(Ljava/lang/String;\)Ljavax/crypto/Cipher;

@@ -1,7 +1,0 @@
-const-string v[0-9]+, "RSA encrypt ex"
-[EXCEPTION]          Ljava/lang/Exception; -> 0x[0-9a-fA-F]{4}
-const-string v[0-9]+, "encryptByPublicKey ex"
-[Throwable]invoke-direct \{(v[0-9]+, )*(v[0-9]+)?\}, Lcom/mpush/tools/crypto/CryptoException;\.<init>:\(
-invoke-static.* \{(v[0-9]+, )*(v[0-9]+)?\}, Ljavax/crypto/Cipher;\.getInstance:\(Ljava/lang/String;\)Ljavax/crypto/Cipher;
-invoke-(virtual|super|interface).* \{(v[0-9]+, )*(v[0-9]+)?\}, Ljavax/crypto/Cipher;\.init:\(ILjava/security/Key;\)V
-invoke-.* \{(v[0-9]+, )*(v[0-9]+)?\}, .*\.getModulus:\(.*\).*

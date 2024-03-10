@@ -1,8 +1,0 @@
-const-string v[0-9]+, "Signature"
-const-string v[0-9]+, ".* for provider .*"
-const-string v[0-9]+, "no such algorithm: .*"
-[Throwable]invoke-direct \{(v[0-9]+, )*(v[0-9]+)?\}, Ljava/security/NoSuchAlgorithmException;\.<init>:\(
-[EXCEPTION]          Ljava/security/GeneralSecurityException; -> 0x[0-9a-fA-F]{4}
-invoke-.* \{(v[0-9]+, )*(v[0-9]+)?\}, .*\.getService:\(.*\).*
-invoke-.* \{(v[0-9]+, )*(v[0-9]+)?\}, .*\.getInstance:\(.*\).*
-invoke-static.* \{(v[0-9]+, )*(v[0-9]+)?\}, Ljavax/crypto/Cipher;\.getInstance:\(Ljava/lang/String;Ljava/security/Provider;\)Ljavax/crypto/Cipher;

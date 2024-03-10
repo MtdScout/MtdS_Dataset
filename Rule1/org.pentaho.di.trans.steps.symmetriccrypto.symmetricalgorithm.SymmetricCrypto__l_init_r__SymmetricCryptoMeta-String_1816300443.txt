@@ -1,5 +1,0 @@
-const-string v[0-9]+, "SymmetricCrypto\.SymmetricCrypto\.Error\.Cipher"
-[EXCEPTION]          Ljava/lang/Exception; -> 0x[0-9a-fA-F]{4}
-const-string v[0-9]+, "SymmetricCrypto\.SchemeMissing"
-[Throwable]invoke-direct \{(v[0-9]+, )*(v[0-9]+)?\}, Lorg/pentaho/di/trans/steps/symmetriccrypto/symmetricalgorithm/CryptoException;\.<init>:\(
-invoke-static.* \{(v[0-9]+, )*(v[0-9]+)?\}, Ljavax/crypto/Cipher;\.getInstance:\(Ljava/lang/String;\)Ljavax/crypto/Cipher;
