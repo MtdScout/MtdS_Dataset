@@ -1,0 +1,14 @@
+[EXCEPTION]          Ljava/lang/Exception; -> 0x[0-9a-fA-F]{4}
+[Throwable]invoke-direct \{(v[0-9]+, )*(v[0-9]+)?\}, Lorg/apache/commons/httpclient/auth/AuthenticationException;\.<init>:\(
+const-string v[0-9]+, "DES\/ECB\/NoPadding"
+invoke-static.* \{(v[0-9]+, )*(v[0-9]+)?\}, Ljava/lang/System;\.arraycopy:\(Ljava/lang/Object;ILjava/lang/Object;II\)V
+invoke-static.* \{(v[0-9]+, )*(v[0-9]+)?\}, Ljavax/crypto/Cipher;\.getInstance:\(Ljava/lang/String;\)Ljavax/crypto/Cipher;
+invoke-(virtual|super|interface).* \{(v[0-9]+, )*(v[0-9]+)?\}, Ljavax/crypto/Cipher;\.init:\(ILjava/security/Key;\)V
+invoke-(virtual|super|interface).* \{(v[0-9]+, )*(v[0-9]+)?\}, Ljavax/crypto/Cipher;\.doFinal:\(\[B\)\[B
+invoke-(virtual|super|interface).* \{(v[0-9]+, )*(v[0-9]+)?\}, Ljavax/crypto/Cipher;\.init:\(ILjava/security/Key;\)V
+invoke-(virtual|super|interface).* \{(v[0-9]+, )*(v[0-9]+)?\}, Ljavax/crypto/Cipher;\.doFinal:\(\[B\)\[B
+invoke-(virtual|super|interface).* \{(v[0-9]+, )*(v[0-9]+)?\}, Ljavax/crypto/Cipher;\.init:\(ILjava/security/Key;\)V
+invoke-(virtual|super|interface).* \{(v[0-9]+, )*(v[0-9]+)?\}, Ljavax/crypto/Cipher;\.doFinal:\(\[B\)\[B
+invoke-static.* \{(v[0-9]+, )*(v[0-9]+)?\}, Ljava/lang/System;\.arraycopy:\(Ljava/lang/Object;ILjava/lang/Object;II\)V
+invoke-static.* \{(v[0-9]+, )*(v[0-9]+)?\}, Ljava/lang/System;\.arraycopy:\(Ljava/lang/Object;ILjava/lang/Object;II\)V
+invoke-static.* \{(v[0-9]+, )*(v[0-9]+)?\}, Ljava/lang/System;\.arraycopy:\(Ljava/lang/Object;ILjava/lang/Object;II\)V
