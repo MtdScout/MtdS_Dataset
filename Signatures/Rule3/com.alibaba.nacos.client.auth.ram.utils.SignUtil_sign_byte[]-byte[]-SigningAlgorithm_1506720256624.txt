@@ -1,0 +1,7 @@
+[EXCEPTION]          Ljava/lang/Exception; -> 0x[0-9a-fA-F]{4}
+[Throwable]invoke-direct \{(v[0-9]+, )*(v[0-9]+)?\}, Ljava/lang/Exception;\.<init>:\(
+const-string v[0-9]+, "Unable to calculate a request signature: .*"
+invoke-static.* \{(v[0-9]+, )*(v[0-9]+)?\}, Ljavax/crypto/Mac;\.getInstance:\(Ljava/lang/String;\)Ljavax/crypto/Mac;
+invoke-direct.* \{(v[0-9]+, )*(v[0-9]+)?\}, Ljavax/crypto/spec/SecretKeySpec;\.<init>:\(\[BLjava/lang/String;\)V
+invoke-(virtual|super|interface).* \{(v[0-9]+, )*(v[0-9]+)?\}, Ljavax/crypto/Mac;\.init:\(Ljava/security/Key;\)V
+invoke-(virtual|super|interface).* \{(v[0-9]+, )*(v[0-9]+)?\}, Ljavax/crypto/Mac;\.doFinal:\(\[B\)\[B

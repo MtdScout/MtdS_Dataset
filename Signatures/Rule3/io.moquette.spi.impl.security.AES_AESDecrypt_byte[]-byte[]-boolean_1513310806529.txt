@@ -1,0 +1,12 @@
+const-string v[0-9]+, "AES\/CBC\/PKCS5Padding"
+const-string v[0-9]+, "Key长度不是16位"
+const-string v[0-9]+, "AES"
+[EXCEPTION]          Ljava/lang/Exception; -> 0x[0-9a-fA-F]{4}
+invoke-(virtual|super|interface).* \{(v[0-9]+, )*(v[0-9]+)?\}, Ljava/io/PrintStream;\.print:\(Ljava/lang/String;\)V
+invoke-direct.* \{(v[0-9]+, )*(v[0-9]+)?\}, Ljavax/crypto/spec/SecretKeySpec;\.<init>:\(\[BLjava/lang/String;\)V
+invoke-static.* \{(v[0-9]+, )*(v[0-9]+)?\}, Ljavax/crypto/Cipher;\.getInstance:\(Ljava/lang/String;\)Ljavax/crypto/Cipher;
+invoke-direct.* \{(v[0-9]+, )*(v[0-9]+)?\}, Ljavax/crypto/spec/IvParameterSpec;\.<init>:\(\[B\)V
+invoke-(virtual|super|interface).* \{(v[0-9]+, )*(v[0-9]+)?\}, Ljavax/crypto/Cipher;\.init:\(ILjava/security/Key;Ljava/security/spec/AlgorithmParameterSpec;\)V
+invoke-(virtual|super|interface).* \{(v[0-9]+, )*(v[0-9]+)?\}, Ljavax/crypto/Cipher;\.doFinal:\(\[B\)\[B
+invoke-static.* \{(v[0-9]+, )*(v[0-9]+)?\}, Ljava/lang/System;\.currentTimeMillis:\(\)J
+invoke-static.* \{(v[0-9]+, )*(v[0-9]+)?\}, Ljava/lang/System;\.arraycopy:\(Ljava/lang/Object;ILjava/lang/Object;II\)V

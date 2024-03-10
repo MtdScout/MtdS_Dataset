@@ -1,0 +1,6 @@
+[EXCEPTION]          Ljava/security/NoSuchAlgorithmException; -> 0x[0-9a-fA-F]{4}
+const-string v[0-9]+, "SHA1PRNG"
+const-string v[0-9]+, "https:\/\/docs\.oracle\.com\/javase\/8\/docs\/technotes\/guides\/security\/StandardNames\.html#SecureRandom"
+[Throwable]invoke-direct \{(v[0-9]+, )*(v[0-9]+)?\}, Ljava/lang/AssertionError;\.<init>:\(
+invoke-static.* \{(v[0-9]+, )*(v[0-9]+)?\}, Ljava/security/SecureRandom;\.getInstance:\(Ljava/lang/String;\)Ljava/security/SecureRandom;
+invoke-(virtual|super|interface).* \{(v[0-9]+, )*(v[0-9]+)?\}, Ljava/security/SecureRandom;\.setSeed:\(\[B\)V

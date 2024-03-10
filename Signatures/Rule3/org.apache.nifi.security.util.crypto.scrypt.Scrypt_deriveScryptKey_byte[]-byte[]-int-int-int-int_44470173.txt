@@ -1,0 +1,20 @@
+const-string v[0-9]+, "Parameter r is too large"
+const-string v[0-9]+, "A salt of length \{\} was used for scrypt key derivation"
+const-string v[0-9]+, "N must be a power of 2 greater than 1"
+const-string v[0-9]+, "HmacSHA256"
+const-string v[0-9]+, "An empty salt was used for scrypt key derivation"
+const-string v[0-9]+, "Parameter r must be 1 or greater"
+const-string v[0-9]+, "Parameter p must be 1 or greater"
+const-string v[0-9]+, "Parameter N is too large"
+const-string v[0-9]+, "Password cannot be empty"
+const-string v[0-9]+, "Parameter p is too large"
+invoke-direct.* \{(v[0-9]+, )*(v[0-9]+)?\}, Ljava/lang/IllegalArgumentException;\.<init>:\(Ljava/lang/String;\)V
+invoke-direct.* \{(v[0-9]+, )*(v[0-9]+)?\}, Ljava/lang/IllegalArgumentException;\.<init>:\(Ljava/lang/String;\)V
+invoke-direct.* \{(v[0-9]+, )*(v[0-9]+)?\}, Ljava/lang/IllegalArgumentException;\.<init>:\(Ljava/lang/String;\)V
+invoke-direct.* \{(v[0-9]+, )*(v[0-9]+)?\}, Ljava/lang/IllegalArgumentException;\.<init>:\(Ljava/lang/String;\)V
+invoke-direct.* \{(v[0-9]+, )*(v[0-9]+)?\}, Ljava/lang/IllegalArgumentException;\.<init>:\(Ljava/lang/String;\)V
+invoke-direct.* \{(v[0-9]+, )*(v[0-9]+)?\}, Ljava/lang/IllegalArgumentException;\.<init>:\(Ljava/lang/String;\)V
+invoke-direct.* \{(v[0-9]+, )*(v[0-9]+)?\}, Ljava/lang/IllegalArgumentException;\.<init>:\(Ljava/lang/String;\)V
+invoke-static.* \{(v[0-9]+, )*(v[0-9]+)?\}, Ljavax/crypto/Mac;\.getInstance:\(Ljava/lang/String;\)Ljavax/crypto/Mac;
+invoke-direct.* \{(v[0-9]+, )*(v[0-9]+)?\}, Ljavax/crypto/spec/SecretKeySpec;\.<init>:\(\[BLjava/lang/String;\)V
+invoke-(virtual|super|interface).* \{(v[0-9]+, )*(v[0-9]+)?\}, Ljavax/crypto/Mac;\.init:\(Ljava/security/Key;\)V

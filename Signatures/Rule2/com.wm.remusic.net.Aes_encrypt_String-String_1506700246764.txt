@@ -1,0 +1,18 @@
+[EXCEPTION]          Ljava/security/NoSuchAlgorithmException; -> 0x[0-9a-fA-F]{4}
+[EXCEPTION]          Ljavax/crypto/BadPaddingException; -> 0x[0-9a-fA-F]{4}
+const-string v[0-9]+, "0102030405060708"
+const-string v[0-9]+, "AES"
+const-string v[0-9]+, "AES\/CBC\/NoPadding"
+[EXCEPTION]          Ljavax/crypto/NoSuchPaddingException; -> 0x[0-9a-fA-F]{4}
+[EXCEPTION]          Ljava/security/InvalidKeyException; -> 0x[0-9a-fA-F]{4}
+[EXCEPTION]          Ljavax/crypto/IllegalBlockSizeException; -> 0x[0-9a-fA-F]{4}
+invoke-static.* \{(v[0-9]+, )*(v[0-9]+)?\}, Ljavax/crypto/Cipher;\.getInstance:\(Ljava/lang/String;\)Ljavax/crypto/Cipher;
+invoke-(virtual|super|interface).* \{(v[0-9]+, )*(v[0-9]+)?\}, Ljavax/crypto/Cipher;\.getBlockSize:\(\)I
+invoke-(virtual|super|interface).* \{(v[0-9]+, )*(v[0-9]+)?\}, Ljava/lang/String;\.getBytes:\(\)\[B
+invoke-static.* \{(v[0-9]+, )*(v[0-9]+)?\}, Ljava/lang/System;\.arraycopy:\(Ljava/lang/Object;ILjava/lang/Object;II\)V
+invoke-(virtual|super|interface).* \{(v[0-9]+, )*(v[0-9]+)?\}, Ljava/lang/String;\.getBytes:\(\)\[B
+invoke-direct.* \{(v[0-9]+, )*(v[0-9]+)?\}, Ljavax/crypto/spec/SecretKeySpec;\.<init>:\(\[BLjava/lang/String;\)V
+invoke-(virtual|super|interface).* \{(v[0-9]+, )*(v[0-9]+)?\}, Ljava/lang/String;\.getBytes:\(\)\[B
+invoke-direct.* \{(v[0-9]+, )*(v[0-9]+)?\}, Ljavax/crypto/spec/IvParameterSpec;\.<init>:\(\[B\)V
+invoke-(virtual|super|interface).* \{(v[0-9]+, )*(v[0-9]+)?\}, Ljavax/crypto/Cipher;\.init:\(ILjava/security/Key;Ljava/security/spec/AlgorithmParameterSpec;\)V
+invoke-(virtual|super|interface).* \{(v[0-9]+, )*(v[0-9]+)?\}, Ljavax/crypto/Cipher;\.doFinal:\(\[B\)\[B

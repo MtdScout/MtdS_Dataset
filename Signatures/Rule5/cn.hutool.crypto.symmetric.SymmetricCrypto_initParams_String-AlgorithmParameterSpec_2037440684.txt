@@ -1,0 +1,5 @@
+const-string v[0-9]+, "AES"
+const-string v[0-9]+, "PBE"
+invoke-(virtual|super|interface).* \{(v[0-9]+, )*(v[0-9]+)?\}, Ljavax/crypto/Cipher;\.getIV:\(\)\[B
+invoke-direct.* \{(v[0-9]+, )*(v[0-9]+)?\}, Ljavax/crypto/spec/PBEParameterSpec;\.<init>:\(\[BI\)V
+invoke-direct.* \{(v[0-9]+, )*(v[0-9]+)?\}, Ljavax/crypto/spec/IvParameterSpec;\.<init>:\(\[B\)V

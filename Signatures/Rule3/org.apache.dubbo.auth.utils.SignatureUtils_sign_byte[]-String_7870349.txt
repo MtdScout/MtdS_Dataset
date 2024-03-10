@@ -1,0 +1,10 @@
+const-string v[0-9]+, "Failed to generate HMAC : .*"
+[EXCEPTION]          Ljava/lang/Exception; -> 0x[0-9a-fA-F]{4}
+[Throwable]invoke-direct \{(v[0-9]+, )*(v[0-9]+)?\}, Ljava/security/SignatureException;\.<init>:\(
+invoke-static.* \{(v[0-9]+, )*(v[0-9]+)?\}, Ljavax/crypto/Mac;\.getInstance:\(Ljava/lang/String;\)Ljavax/crypto/Mac;
+invoke-(virtual|super|interface).* \{(v[0-9]+, )*(v[0-9]+)?\}, Ljava/lang/String;\.getBytes:\(\)\[B
+invoke-direct.* \{(v[0-9]+, )*(v[0-9]+)?\}, Ljavax/crypto/spec/SecretKeySpec;\.<init>:\(\[BLjava/lang/String;\)V
+invoke-(virtual|super|interface).* \{(v[0-9]+, )*(v[0-9]+)?\}, Ljavax/crypto/Mac;\.init:\(Ljava/security/Key;\)V
+invoke-(virtual|super|interface).* \{(v[0-9]+, )*(v[0-9]+)?\}, Ljavax/crypto/Mac;\.doFinal:\(\[B\)\[B
+invoke-static.* \{(v[0-9]+, )*(v[0-9]+)?\}, Ljava/util/Base64;\.getEncoder:\(\)Ljava/util/Base64\$Encoder;
+invoke-(virtual|super|interface).* \{(v[0-9]+, )*(v[0-9]+)?\}, Ljava/util/Base64\$Encoder;\.encodeToString:\(\[B\)Ljava/lang/String;

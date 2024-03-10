@@ -1,0 +1,7 @@
+[Throwable]invoke-direct \{(v[0-9]+, )*(v[0-9]+)?\}, Lorg/apache/rocketmq/acl/common/AclException;\.<init>:\(
+[EXCEPTION]          Ljava/lang/Exception; -> 0x[0-9a-fA-F]{4}
+const-string v[0-9]+, "CAL_SIGNATURE_FAILED"
+invoke-static.* \{(v[0-9]+, )*(v[0-9]+)?\}, Ljavax/crypto/Mac;\.getInstance:\(Ljava/lang/String;\)Ljavax/crypto/Mac;
+invoke-direct.* \{(v[0-9]+, )*(v[0-9]+)?\}, Ljavax/crypto/spec/SecretKeySpec;\.<init>:\(\[BLjava/lang/String;\)V
+invoke-(virtual|super|interface).* \{(v[0-9]+, )*(v[0-9]+)?\}, Ljavax/crypto/Mac;\.init:\(Ljava/security/Key;\)V
+invoke-(virtual|super|interface).* \{(v[0-9]+, )*(v[0-9]+)?\}, Ljavax/crypto/Mac;\.doFinal:\(\[B\)\[B
