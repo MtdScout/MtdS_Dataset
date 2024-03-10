@@ -1,0 +1,12 @@
+const-string v[0-9]+, "AES"
+[EXCEPTION]          Ljava/lang/Exception; -> 0x[0-9a-fA-F]{4}
+const-string v[0-9]+, "AES\/ECB\/PKCS5Padding"
+const-string v[0-9]+, "SHA-1"
+invoke-(virtual|super|interface).* \{(v[0-9]+, )*(v[0-9]+)?\}, Ljava/lang/String;\.getBytes:\(Ljava/lang/String;\)\[B
+invoke-.* \{(v[0-9]+, )*(v[0-9]+)?\}, .*\.digest:\(.*\).*
+invoke-direct \{(v[0-9]+, )*(v[0-9]+)?\}, .*\.<init>:\(.*\).*
+invoke-.* \{(v[0-9]+, )*(v[0-9]+)?\}, .*\.init:\(.*\).*
+invoke-(virtual|super|interface).* \{(v[0-9]+, )*(v[0-9]+)?\}, Ljava/lang/String;\.getBytes:\(Ljava/lang/String;\)\[B
+invoke-.* \{(v[0-9]+, )*(v[0-9]+)?\}, .*\.doFinal:\(.*\).*
+invoke-(virtual|super|interface).* \{(v[0-9]+, )*(v[0-9]+)?\}, Ljava/lang/String;\.getBytes:\(\)\[B
+invoke-(virtual|super|interface).* \{(v[0-9]+, )*(v[0-9]+)?\}, Ljava/lang/String;\.getBytes:\(\)\[B
