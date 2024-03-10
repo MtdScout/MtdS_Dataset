@@ -1,0 +1,2 @@
+Since more than 20K APK files take up a lot of space, we generate an APK list, recording the package name of each app and its SHA256 value. 
+The reader can obtain the corresponding APK file from Androzoo <https://androzoo.uni.lu> based on the SHA256 values.
